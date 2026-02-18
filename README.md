@@ -26,8 +26,4 @@ A responsive photography studio website built with **HTML**, **CSS**, and **Tail
 
 ---
 
-## How to Use
 
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/photography-studio-website.git
