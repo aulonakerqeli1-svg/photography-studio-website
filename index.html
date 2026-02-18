@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Studio</title>
+    <link rel="stylesheet" href="assets/css/output.css">
+</head>
+
+<body class="bg-black text-white">
+
+<header class="bg-black border-b border-gray-800 relative">
+  <div class="container mx-auto flex justify-between items-center h-24 px-6">
+    <img src="/assets/logo.png" alt="logo" class="w-20" />
+
+
+    <nav class="hidden md:flex">
+      <ul class="flex gap-6 items-center">
+        <li><a href="#home" class="text-gray-300 uppercase font-semibold hover:text-amber-400 transition duration-300">Home</a></li>
+        <li><a href="#about" class="text-gray-300 uppercase font-semibold hover:text-amber-400 transition duration-300">About</a></li>
+        <li><a href="#gallery" class="text-gray-300 uppercase font-semibold hover:text-amber-400 transition duration-300">Gallery</a></li>
+        <li><a href="#services" class="text-gray-300 uppercase font-semibold hover:text-amber-400 transition duration-300">Services</a></li>
+        <li><a href="#pricing" class="text-gray-300 uppercase font-bold hover:text-amber-400 transition duration-300">Pricing</a></li>
+        <li><a href="#contact" class="text-gray-300 uppercase font-bold hover:text-amber-400 transition duration-300">Contact</a></li>
+        <li>
+          <a href="#book" class="bg-amber-500 text-black px-4 py-2 rounded-full font-bold hover:bg-amber-400 transition duration-300">
+            Book Now
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-gray-300 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+  <nav id="mobile-menu" class="hidden absolute top-24 left-0 w-full bg-gray-900 text-white shadow-lg z-50">
+    <ul class="flex flex-col gap-4 py-6 px-6">
+      <li><a href="#home" class="hover:text-amber-400 transition" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" class="hover:text-amber-400 transition" onclick="toggleMenu()">About</a></li>
+      <li><a href="#gallery" class="hover:text-amber-400 transition" onclick="toggleMenu()">Gallery</a></li>
+      <li><a href="#services" class="hover:text-amber-400 transition" onclick="toggleMenu()">Services</a></li>
+      <li><a href="#pricing" class="hover:text-amber-400 transition" onclick="toggleMenu()">Pricing</a></li>
+      <li><a href="#contact" class="hover:text-amber-400 transition" onclick="toggleMenu()">Contact</a></li>
+      <li>
+        <a href="#book" class="bg-amber-500 text-black px-4 py-2 rounded-full font-bold hover:bg-amber-400 transition duration-300 w-full text-center" onclick="toggleMenu()">
+          Book Now
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden'); 
+  });
+
+  function toggleMenu() {
+    mobileMenu.classList.add('hidden'); 
+  }
+</script>
+
+
+<main class="bg-gray-900 min-h-screen flex items-center">
+  <section id="home" class="container mx-auto flex flex-col-reverse md:flex-row justify-between items-center px-6 gap-8">
+    
+    <div class="max-w-xl text-center md:text-left">
+      <h1 class="font-bold text-white text-4xl sm:text-5xl mb-6">
+        Capturing Life’s <span class="text-amber-400">Most Beautiful</span> Moments
+      </h1>
+
+      <p class="text-gray-300 mb-6 text-sm sm:text-base">
+        From weddings and portraits to events and product photography,
+        we turn every moment into a timeless memory.
+      </p>
+
+      <a href="#gallery"
+         class="px-6 py-3 rounded-full bg-amber-500 text-black font-semibold hover:bg-amber-400 transition duration-300">
+        Explore Our Work
+      </a>
+    </div>
+
+    <div>
+      <img src="/assets/01.jpg" alt="home-image" class="w-72 sm:w-96 rounded-xl shadow-2xl mx-auto">
+    </div>
+
+  </section>
+</main>
+
+<section class="py-20 bg-black" id="about">
+  <div class="container mx-auto px-6">
+
+    <h2 class="text-3xl sm:text-4xl font-bold text-center text-amber-400 mb-6">
+      Behind The Lens
+    </h2>
+
+    <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12 text-sm sm:text-base">
+      Photography is not just our profession — it’s our passion.
+      What started as a simple love for capturing sunsets has grown
+      into a full-service studio dedicated to preserving life’s most meaningful moments.
+    </p>
+
+    <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+
+   
+      <div class="flex flex-col sm:flex-row gap-8 md:gap-12 text-center">
+        <div>
+          <h3 class="text-4xl sm:text-5xl font-bold text-amber-400">500+</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Happy Clients</p>
+        </div>
+
+        <div>
+          <h3 class="text-4xl sm:text-5xl font-bold text-amber-400">8+</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Years Experience</p>
+        </div>
+
+        <div>
+          <h3 class="text-4xl sm:text-5xl font-bold text-amber-400">1200+</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Projects Completed</p>
+        </div>
+      </div>
+
+      <div class="mt-8 md:mt-0">
+        <img src="/assets/06.jpg" alt="about-image" class="w-60 sm:w-80 rounded-2xl shadow-xl mx-auto md:mx-0">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="py-20 bg-gray-900" id="gallery">
+  <div class="container mx-auto flex flex-col gap-12 px-6">
+    
+    <div>
+      <h2 class="text-4xl sm:text-6xl md:text-7xl font-bold text-amber-400 text-center mb-12">
+        Gallery
+      </h2>
+    </div>
+
+    <div class="flex flex-row gap-4 sm:gap-6 w-full overflow-x-auto pb-4">
+      <img src="/assets/01.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/09.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/06.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/04.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/05.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+        <img src="/assets/02.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+          <img src="/assets/03.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+          <img src="/assets/07.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+    </div>
+
+    <div class="flex flex-row gap-4 sm:gap-6 w-full overflow-x-auto pb-4">
+      <img src="/assets/10.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/11.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/12.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/13.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/14.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/08.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/16.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/15.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+      <img src="/assets/17.jpg" alt="photo" class="w-40 sm:w-64 h-40 sm:h-64 object-cover rounded-lg shrink-0">
+    </div>
+
+  </div>
+</section>
+
+<section class="py-20 bg-gray-900" id="services">
+  <div class="text-center mb-16">
+    <h1 class="text-3xl sm:text-4xl font-bold text-amber-400">Services</h1>
+    <p class="text-gray-400 mt-2 max-w-2xl mx-auto">
+      Choose the perfect service for your needs. Our photography services capture your moments beautifully.
+    </p>
+  </div>
+
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 justify-items-center">
+
+    <div class="bg-gray-800 rounded-3xl p-8 sm:p-12 text-center w-full max-w-sm shadow-lg hover:shadow-2xl transition duration-300">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-amber-400">Weddings Photography</h2>
+      <img src="/assets/04.jpg" alt="Weddings Photography" class="mx-auto mb-6 h-32 object-cover rounded-lg shadow-md">
+      <a href="#book"
+         class="inline-block bg-amber-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-amber-600 hover:shadow-lg transition w-full sm:w-auto">
+        Book Now
+      </a>
+    </div>
+
+    <div class="bg-gray-800 rounded-3xl p-8 sm:p-12 text-center w-full max-w-sm shadow-lg hover:shadow-2xl transition duration-300">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-amber-400">Portrait Sessions</h2>
+      <img src="/assets/17.jpg" alt="Portrait Sessions" class="mx-auto mb-6 h-32 object-cover rounded-lg shadow-md">
+      <a href="#book"
+         class="inline-block bg-amber-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-amber-600 hover:shadow-lg transition w-full sm:w-auto">
+        Book Now
+      </a>
+    </div>
+
+    <div class="bg-gray-800 rounded-3xl p-8 sm:p-12 text-center w-full max-w-sm shadow-lg hover:shadow-2xl transition duration-300">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-amber-400">Event Photography</h2>
+      <img src="/assets/18.jpg" alt="Event Photography" class="mx-auto mb-6 h-32 object-cover rounded-lg shadow-md">
+      <a href="#book"
+         class="inline-block bg-amber-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-amber-600 hover:shadow-lg transition w-full sm:w-auto">
+        Book Now
+      </a>
+    </div>
+
+    <div class="bg-gray-800 rounded-3xl p-8 sm:p-12 text-center w-full max-w-sm shadow-lg hover:shadow-2xl transition duration-300">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-amber-400">Product Photography</h2>
+      <img src="/assets/19.jpg" alt="Product Photography" class="mx-auto mb-6 h-32 object-cover rounded-lg shadow-md">
+      <a href="#book"
+         class="inline-block bg-amber-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-amber-600 hover:shadow-lg transition w-full sm:w-auto">
+        Book Now
+      </a>
+    </div>
+
+    <div class="bg-gray-800 rounded-3xl p-8 sm:p-12 text-center w-full max-w-sm shadow-lg hover:shadow-2xl transition duration-300">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-6 text-amber-400">Drone / Aerial Shots</h2>
+      <img src="/assets/20.jpg" alt="Drone / Aerial Shots" class="mx-auto mb-6 h-32 object-cover rounded-lg shadow-md">
+      <a href="#book"
+         class="inline-block bg-amber-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-amber-600 hover:shadow-lg transition w-full sm:w-auto">
+        Book Now
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="pricing" class="py-20 bg-gray-900 text-white">
+  <div class="container mx-auto px-6 max-w-6xl">
+
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-400 text-center mb-16">
+      Paketat e Shërbimit
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <div class="bg-gray-800 rounded-xl p-6 shadow-md flex flex-col justify-between min-h-95 hover:shadow-xl transition duration-300">
+        <div>
+          <h3 class="text-amber-400 text-xl font-semibold mb-4 uppercase tracking-wide text-center">Standard</h3>
+          <p class="text-amber-500 text-4xl font-bold mb-6 text-center">$29<span class="text-gray-400 text-base font-normal ml-2">per month</span></p>
+          <ul class="text-gray-300 space-y-3 mb-8">
+            <li><span class="text-amber-400">✔</span> 1 Photoshoot per month</li>
+            <li><span class="text-amber-400">✔</span> 10 Edited Photos</li>
+            <li><span class="text-amber-400">✔</span> Basic Retouching</li>
+            <li><span class="text-amber-400">✔</span> Online Gallery Access</li>
+          </ul>
+        </div>
+        <button class="bg-amber-500 text-black font-semibold py-3 rounded-xl hover:bg-amber-600 shadow-md w-full transition duration-300">
+          Zgjidh Paketën
+        </button>
+      </div>
+
+      <div class="bg-gray-800 rounded-xl p-6 shadow-2xl border-4 border-amber-400 scale-105 flex flex-col justify-between min-h-95 hover:shadow-3xl transition duration-300">
+        <div>
+          <h3 class="text-amber-300 text-xl font-semibold mb-4 uppercase tracking-wide text-center">Premium</h3>
+          <p class="text-amber-500 text-4xl font-bold mb-6 text-center">$59<span class="text-gray-400 text-base font-normal ml-2">per month</span></p>
+          <ul class="text-gray-300 space-y-3 mb-8">
+            <li><span class="text-amber-400">✔</span> 2 Photoshoots per month</li>
+            <li><span class="text-amber-400">✔</span> 25 Edited Photos</li>
+            <li><span class="text-amber-400">✔</span> Advanced Retouching</li>
+            <li><span class="text-amber-400">✔</span> Priority Online Gallery</li>
+          </ul>
+        </div>
+        <button class="bg-amber-500 text-black font-semibold py-3 rounded-xl hover:bg-amber-600 shadow-md w-full transition duration-300">
+          Zgjidh Paketën
+        </button>
+      </div>
+
+      <div class="bg-gray-800 rounded-xl p-6 shadow-md flex flex-col justify-between min-h-95 hover:shadow-xl transition duration-300">
+        <div>
+          <h3 class="text-amber-400 text-xl font-semibold mb-4 uppercase tracking-wide text-center">Deluxe</h3>
+          <p class="text-amber-500 text-4xl font-bold mb-6 text-center">$99<span class="text-gray-400 text-base font-normal ml-2">per month</span></p>
+          <ul class="text-gray-300 space-y-3 mb-8">
+            <li><span class="text-amber-400">✔</span> 4 Photoshoots per month</li>
+            <li><span class="text-amber-400">✔</span> 50 Edited Photos</li>
+            <li><span class="text-amber-400">✔</span> Full Retouching & Color Grading</li>
+            <li><span class="text-amber-400">✔</span> Priority Delivery & Prints</li>
+          </ul>
+        </div>
+        <button class="bg-amber-500 text-black font-semibold py-3 rounded-xl hover:bg-amber-600 shadow-md w-full transition duration-300">
+          Zgjidh Paketën
+        </button>
+      </div>
+
+      <div class="bg-gray-800 rounded-xl p-6 shadow-md flex flex-col justify-between min-h-95 hover:shadow-xl transition duration-300">
+        <div>
+          <h3 class="text-amber-300 text-xl font-semibold mb-4 uppercase tracking-wide text-center">Custom</h3>
+          <p class="text-amber-500 text-4xl font-bold mb-6 text-center">Contact<span class="text-gray-400 text-base font-normal ml-2">for pricing</span></p>
+          <ul class="text-gray-300 space-y-3 mb-8">
+            <li><span class="text-amber-400">✔</span> Personalized Photoshoots</li>
+            <li><span class="text-amber-400">✔</span> Unlimited Edited Photos</li>
+            <li><span class="text-amber-400">✔</span> Full Retouching + Creative Edits</li>
+            <li><span class="text-amber-400">✔</span> Private Online Gallery + Prints</li>
+          </ul>
+        </div>
+        <button class="bg-amber-500 text-black font-semibold py-3 rounded-xl hover:bg-amber-600 shadow-md w-full transition duration-300">
+          Kontakto
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-20 bg-gray-900 text-white">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <h2 class="text-3xl sm:text-4xl font-bold text-amber-400 text-center mb-12">Contact Us</h2>
+    <div class="flex flex-col lg:flex-row gap-12">
+
+      <form class="flex-1 bg-gray-800 p-8 rounded-2xl shadow-md space-y-6">
+        <div>
+          <label class="block mb-2 text-gray-300">Name</label>
+          <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-amber-400 focus:ring focus:ring-amber-400 focus:ring-opacity-50 transition transform focus:scale-105"/>
+        </div>
+        <div>
+          <label class="block mb-2 text-gray-300">Email</label>
+          <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-amber-400 focus:ring focus:ring-amber-400 focus:ring-opacity-50 transition transform focus:scale-105"/>
+        </div>
+        <div>
+          <label class="block mb-2 text-gray-300">Message</label>
+          <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-amber-400 focus:ring focus:ring-amber-400 focus:ring-opacity-50 transition transform focus:scale-105"></textarea>
+        </div>
+        <button type="submit" class="bg-amber-500 hover:shadow-lg hover:scale-105 transition duration-300 w-full py-3 rounded-lg font-semibold text-black">Send Message</button>
+      </form>
+
+
+      <div class="flex-1 flex flex-col justify-between gap-6">
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-amber-400">Get in Touch</h3>
+          <p class="text-gray-300">📍 123 Photography Street, Gjilan, Kosova</p>
+          <p class="text-gray-300">✉ Fjollapira@studio.com</p>
+          <p class="text-gray-300">📞 +383 456 7890</p>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-amber-400">Follow Us</h3>
+          <div class="flex gap-4 text-gray-300">
+            <a href="#" class="hover:text-amber-400 transition">📘</a>
+            <a href="#" class="hover:text-amber-400 transition">📸</a>
+            <a href="#" class="hover:text-amber-400 transition">🐦</a>
+          </div>
+        </div>
+        <div class="mt-4">
+          <iframe class="w-full h-48 rounded-xl" src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 py-12">
+  <div class="container mx-auto px-6 max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- About -->
+    <div>
+      <h3 class="text-amber-400 font-bold text-xl mb-4">Photography Studio</h3>
+      <p class="text-gray-400">
+        Capturing your moments with passion and creativity. 
+        From weddings to aerial shots, we turn memories into art.
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-amber-400 font-bold text-xl mb-4">Contact Us</h3>
+      <ul class="space-y-2 text-gray-400">
+        <li>Email: <a href="fjollapira:info@studio.com" class="hover:text-amber-400 transition">info@studio.com</a></li>
+        <li>Phone: <a href="tel:+3834567890" class="hover:text-amber-400 transition">+1 234 567 890</a></li>
+        <li>Address: Bardhyl Osmani, Gjilan, Kosova</li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h3 class="text-amber-400 font-bold text-xl mb-4">Follow Us</h3>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-amber-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M22.46 6c-.77.35-1.6.59-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.3 3.9 12.15 12.15 0 0 1-8.82-4.47 4.28 4.28 0 0 0 1.32 5.72 4.28 4.28 0 0 1-1.94-.53v.05a4.28 4.28 0 0 0 3.44 4.19 4.3 4.3 0 0 1-1.93.07 4.28 4.28 0 0 0 3.99 2.97 8.59 8.59 0 0 1-5.32 1.84c-.35 0-.7-.02-1.04-.06a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2l-.01-.56A8.72 8.72 0 0 0 24 4.56a8.59 8.59 0 0 1-2.54.7z"/>
+          </svg>
+        </a>
+        <a href="#" class="hover:text-amber-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.6 8.06 8.04 8.86v-6.26h-2.42v-2.6h2.42v-1.98c0-2.39 1.43-3.7 3.61-3.7 1.05 0 2.14.19 2.14.19v2.36h-1.21c-1.19 0-1.56.74-1.56 1.5v1.63h2.66l-.43 2.6h-2.23V21.86c4.44-.8 8.04-4.45 8.04-8.86 0-5.5-4.46-9.96-9.96-9.96z"/>
+          </svg>
+        </a>
+        <a href="#" class="hover:text-amber-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M22.22 5.92c-.77.34-1.6.57-2.46.67a4.32 4.32 0 0 0 1.88-2.36 8.56 8.56 0 0 1-2.72 1.03 4.28 4.28 0 0 0-7.3 3.9 12.12 12.12 0 0 1-8.82-4.48 4.28 4.28 0 0 0 1.32 5.72 4.28 4.28 0 0 1-1.94-.53v.05a4.28 4.28 0 0 0 3.44 4.19 4.3 4.3 0 0 1-1.93.07 4.28 4.28 0 0 0 3.99 2.97 8.57 8.57 0 0 1-5.32 1.84c-.35 0-.7-.02-1.04-.06a12.12 12.12 0 0 0 6.56 1.91c7.88 0 12.2-6.53 12.2-12.2l-.01-.56A8.72 8.72 0 0 0 24 4.56a8.57 8.57 0 0 1-1.78.36z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+</body>
+</html>
